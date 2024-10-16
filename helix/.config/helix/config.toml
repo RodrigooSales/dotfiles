@@ -1,0 +1,66 @@
+theme = "catppuccin_mocha"
+[editor]
+cursorline = false
+color-modes = true
+cursorcolumn = false
+rulers = [80, 100]
+bufferline = "always"
+auto-format = false
+
+[editor.search]
+smart-case = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+git-global = false # show files hidden by git globally
+max-depth = 20
+
+[editor.indent-guides]
+render = true
+
+#[editor.whitespace]
+#render = "all"
+# or control each character
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+newline = "none"
+tabpad = "all"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·"  # Tabs will look like "→···" (depending on tab width)
+
+[editor.lsp]
+enable = true
+display-messages = true
+display-inlay-hints = true
+
+[keys.normal]
+A-q = ":bc"
+A-w = ":bn"
+A-e = ":bp"
+A-a = ":wa"
+
+[keys.normal.space]
+w = ":write"
+W = ":wa"
+q = ":quit"
+c = ":bca"    # Close buffer
+F = "file_picker_in_current_directory"
+
+[keys.normal.space.f]
+f = "file_picker"
+F = "file_picker_in_current_directory"
+b = "file_picker_in_current_buffer_directory"
+"." = ":toggle-option file-picker.git-ignore" # toggle seeing files hidden with the .gitignore in file pickers
+
